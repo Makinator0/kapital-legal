@@ -98,7 +98,13 @@
 
   <nav aria-label="Language">
     <a href="#en" hreflang="en">English</a>
+    <a href="#de" hreflang="de">Deutsch</a>
+    <a href="#fr" hreflang="fr">Français</a>
+    <a href="#it" hreflang="it">Italiano</a>
     <a href="#cs" hreflang="cs">Čeština</a>
+    <a href="#da" hreflang="da">Dansk</a>
+    <a href="#nb" hreflang="nb">Norsk</a>
+    <a href="#sv" hreflang="sv">Svenska</a>
     <a href="#uk" hreflang="uk">Українська</a>
     <a href="#ru" hreflang="ru">Русский</a>
   </nav>
@@ -109,7 +115,7 @@
     <p class="lead">Kapitál is a personal finance app for Android that shows your net worth and spending. This policy explains what happens to your data. In short: everything stays on your phone. The developer doesn't collect, receive, store, share or sell any of your data.</p>
 
     <h3>Data you add to the app</h3>
-    <p>You decide what goes into Kapitál: bank, broker and crypto exchange statements that you choose to import (CSV, Excel, PDF or ZIP files), and the accounts, balances, transactions, positions, categories, notes and settings that you create or edit. Statements are read on your phone; the files themselves are not uploaded anywhere.</p>
+    <p>You decide what goes into Kapitál: bank, broker and crypto exchange statements that you choose to import (CSV, Excel, PDF or ZIP files), and the accounts, balances, transactions, positions, categories, goals, notes and settings that you create or edit. Statements are read on your phone; the files themselves are not uploaded anywhere.</p>
 
     <h3>Where it is stored</h3>
     <p>All of it is kept only on your phone, in a database encrypted with SQLCipher (AES-256). The encryption key is kept in the phone's secure key storage. Kapitál has no user accounts and no servers, and it opts out of Android's automatic cloud backup, so your data is not copied to Google Drive either.</p>
@@ -122,17 +128,25 @@
       <li>current crypto prices from Binance's public market data: when you import a Binance statement and, if you keep crypto in the app, while the app is open, at most once an hour. One request returns the prices of all coins at once, so it doesn't reveal which ones you hold or how many.</li>
     </ul>
     <p>These requests don't include anything from your accounts or transactions. As with any request over the internet, these organisations see your device's IP address and handle it under their own privacy policies.</p>
-    <p>Kapitál contains no advertising, analytics, crash reporting or tracking, and no third-party SDKs that collect data.</p>
+    <p>Kapitál contains no advertising, analytics, automatic crash reporting or tracking, and no third-party SDKs that collect data.</p>
 
     <h3>Backups and files you share</h3>
-    <p>When you export a backup, Kapitál creates a file with all your data and opens your phone's share menu, and you choose where it goes. The backup file is not encrypted, so keep it somewhere safe. Restoring a backup replaces the data in the app.</p>
-    <p>If you turn on automatic copies, you choose a folder in Android's own folder picker, and Kapitál gets access to that folder only. It saves a backup file there once a day when you open the app and after every import, and keeps the last seven. These copies are not encrypted either. They stay in the folder until you delete them, also after you uninstall Kapitál. If the folder syncs to a cloud service, that service's own privacy policy applies to the copies.</p>
+    <p>When you export a backup, Kapitál creates a file with all your data and opens your phone's share menu, and you choose where it goes. Restoring a backup replaces the data in the app.</p>
+    <p>If you turn on automatic copies, you choose a folder in Android's own folder picker, and Kapitál gets access to that folder only. It saves a backup file there once a day when you open the app and after every import, and keeps the last seven. They stay in the folder until you delete them, also after you uninstall Kapitál. If the folder syncs to a cloud service, that service's own privacy policy applies to the copies.</p>
+    <p>Backups are encrypted only if you set a backup password. Then every backup file and automatic copy is encrypted with AES-256-GCM, with a key derived from your password (PBKDF2, 600,000 iterations). The password itself is not stored; the derived key is kept in the phone's secure key storage so that automatic copies can be encrypted too. Without the password an encrypted backup can't be opened by anyone, the developer included. Without a backup password, backup files are not encrypted, so keep them somewhere safe.</p>
+
+    <h3>Reminders and the home-screen widget</h3>
+    <p>Reminders about payments, limits and statements are worked out and scheduled on your phone and shown as ordinary Android notifications; no notification service or server is involved. You can turn them off in the app or in Android settings.</p>
+    <p>If you add the Kapitál widget to your home screen, it shows your net worth, what's left within your limits and the next regular payment. To draw it while the app is closed, Kapitál keeps a short summary of these figures in the phone's secure storage. Anyone who sees your home screen can see them too, so while the app lock is on the widget shows no amounts.</p>
+
+    <h3>Reporting a problem</h3>
+    <p>Kapitál keeps a short technical note about the last error on your phone: the error message, where in the app's code it happened and, for a statement that couldn't be read, the reason and the file type (such as .pdf). It never contains amounts, account names or file contents. When you tap “Report a problem”, Kapitál opens your email app with a draft to the developer: your description, the app and Android versions, the phone model, the app language and that note. Nothing is sent unless you send the email yourself. If you do, the developer receives it together with your email address and uses it only to reply and to fix the problem.</p>
 
     <h3>App lock</h3>
     <p>If you turn on the app lock, your phone checks your fingerprint or face with its own system prompt. Kapitál never gets access to your biometric data.</p>
 
     <h3>Deleting your data</h3>
-    <p>You can delete transactions and accounts in the app at any time. Uninstalling Kapitál, or clearing its data in Android settings, deletes everything it stored. The developer has no copy of your data, so there is nothing to delete on our side.</p>
+    <p>You can delete transactions, accounts and goals in the app at any time. Uninstalling Kapitál, or clearing its data in Android settings, deletes everything it stored on the phone. The developer has no copy of your data, so there is nothing to delete on our side.</p>
 
     <h3>Children</h3>
     <p>Kapitál is meant for adults and isn't directed at children.</p>
@@ -144,13 +158,160 @@
     <p>Questions about privacy: <a href="mailto:ganjubasic314@gmail.com">ganjubasic314@gmail.com</a></p>
   </section>
 
+  <section id="de" lang="de">
+    <h2>Datenschutzerklärung</h2>
+    <p class="date">Gültig ab 3. Oktober 2026</p>
+    <p class="lead">Kapitál ist eine App für persönliche Finanzen für Android, die dein Vermögen und deine Ausgaben zeigt. Diese Erklärung beschreibt, was mit deinen Daten geschieht. Kurz gesagt: Alles bleibt auf deinem Handy. Der Entwickler erhebt, empfängt, speichert, teilt oder verkauft keine deiner Daten.</p>
+
+    <h3>Daten, die du in die App einträgst</h3>
+    <p>Du entscheidest, was in Kapitál landet: Kontoauszüge von Banken, Brokern und Kryptobörsen, die du importieren möchtest (CSV-, Excel-, PDF- oder ZIP-Dateien), sowie die Konten, Salden, Buchungen, Positionen, Kategorien, Sparziele, Notizen und Einstellungen, die du anlegst oder änderst. Kontoauszüge werden auf deinem Handy gelesen; die Dateien selbst werden nirgendwohin hochgeladen.</p>
+
+    <h3>Wo sie gespeichert werden</h3>
+    <p>Alles liegt nur auf deinem Handy, in einer mit SQLCipher (AES-256) verschlüsselten Datenbank. Der Schlüssel liegt im sicheren Schlüsselspeicher des Handys. Kapitál hat keine Benutzerkonten und keine Server und nimmt nicht an der automatischen Cloud-Sicherung von Android teil, deine Daten werden also auch nicht in Google Drive kopiert.</p>
+
+    <h3>Was über das Internet geht</h3>
+    <p>Kapitál lädt nur öffentliche Daten herunter:</p>
+    <ul>
+      <li>Wechselkurse der Tschechischen Nationalbank, der Nationalbank der Ukraine und der Europäischen Zentralbank;</li>
+      <li>Inflation und Leitzinsen der Bank für Internationalen Zahlungsausgleich und der Nationalbank der Ukraine;</li>
+      <li>aktuelle Kryptokurse aus den öffentlichen Marktdaten von Binance: wenn du einen Binance-Auszug importierst und, falls du Krypto in der App führst, während die App geöffnet ist, höchstens einmal pro Stunde. Eine Anfrage liefert die Kurse aller Coins auf einmal und verrät daher nicht, welche du besitzt oder wie viele.</li>
+    </ul>
+    <p>Diese Anfragen enthalten nichts aus deinen Konten oder Buchungen. Wie bei jeder Anfrage über das Internet sehen diese Stellen die IP-Adresse deines Geräts und behandeln sie nach ihren eigenen Datenschutzbestimmungen.</p>
+    <p>Kapitál enthält keine Werbung, keine Analyse, keine automatischen Absturzberichte und kein Tracking sowie keine SDKs von Drittanbietern, die Daten sammeln.</p>
+
+    <h3>Sicherungen und Dateien, die du teilst</h3>
+    <p>Wenn du eine Sicherung exportierst, erstellt Kapitál eine Datei mit all deinen Daten und öffnet das Teilen-Menü deines Handys; wohin sie geht, entscheidest du. Das Wiederherstellen einer Sicherung ersetzt die Daten in der App.</p>
+    <p>Schaltest du automatische Kopien ein, wählst du einen Ordner in der Ordnerauswahl von Android, und Kapitál erhält nur Zugriff auf diesen Ordner. Einmal am Tag beim Öffnen der App und nach jedem Import speichert es dort eine Sicherungsdatei und behält die letzten sieben. Sie bleiben im Ordner, bis du sie löschst, auch nach der Deinstallation von Kapitál. Wird der Ordner mit einem Cloud-Dienst synchronisiert, gilt für die Kopien die Datenschutzerklärung dieses Dienstes.</p>
+    <p>Sicherungen werden nur verschlüsselt, wenn du ein Passwort für Sicherungen festlegst. Dann wird jede Sicherungsdatei und jede automatische Kopie mit AES-256-GCM verschlüsselt, mit einem aus deinem Passwort abgeleiteten Schlüssel (PBKDF2, 600.000 Iterationen). Das Passwort selbst wird nicht gespeichert; der abgeleitete Schlüssel liegt im sicheren Schlüsselspeicher des Handys, damit auch automatische Kopien verschlüsselt werden können. Ohne das Passwort kann niemand eine verschlüsselte Sicherung öffnen, auch der Entwickler nicht. Ohne Passwort sind Sicherungsdateien nicht verschlüsselt, bewahre sie also an einem sicheren Ort auf.</p>
+
+    <h3>Erinnerungen und das Widget auf dem Startbildschirm</h3>
+    <p>Erinnerungen an Zahlungen, Limits und Kontoauszüge werden auf deinem Handy berechnet und geplant und als gewöhnliche Android-Benachrichtigungen angezeigt; kein Benachrichtigungsdienst und kein Server ist beteiligt. Du kannst sie in der App oder in den Android-Einstellungen ausschalten.</p>
+    <p>Wenn du das Kapitál-Widget auf den Startbildschirm legst, zeigt es dein Vermögen, was in deinen Limits übrig ist, und die nächste regelmäßige Zahlung. Damit es auch bei geschlossener App gezeichnet werden kann, hält Kapitál eine kurze Zusammenfassung dieser Zahlen im sicheren Speicher des Handys. Wer deinen Startbildschirm sieht, sieht sie ebenfalls; solange die App-Sperre eingeschaltet ist, zeigt das Widget deshalb keine Beträge.</p>
+
+    <h3>Ein Problem melden</h3>
+    <p>Kapitál speichert auf deinem Handy eine kurze technische Notiz zum letzten Fehler: die Fehlermeldung, wo im Code der App er auftrat, und bei einem Kontoauszug, der sich nicht lesen ließ, den Grund und den Dateityp (etwa .pdf). Sie enthält nie Beträge, Kontonamen oder Dateiinhalte. Tippst du auf „Problem melden“, öffnet Kapitál deine Mail-App mit einem Entwurf an den Entwickler: deine Beschreibung, die Version der App und von Android, das Handymodell, die Sprache der App und diese Notiz. Nichts wird gesendet, solange du die E-Mail nicht selbst abschickst. Tust du es, erhält der Entwickler sie zusammen mit deiner E-Mail-Adresse und nutzt sie nur, um zu antworten und das Problem zu beheben.</p>
+
+    <h3>App-Sperre</h3>
+    <p>Wenn du die App-Sperre einschaltest, prüft dein Handy deinen Fingerabdruck oder dein Gesicht mit seinem eigenen Systemdialog. Kapitál erhält nie Zugriff auf deine biometrischen Daten.</p>
+
+    <h3>Deine Daten löschen</h3>
+    <p>Du kannst Buchungen, Konten und Sparziele jederzeit in der App löschen. Wenn du Kapitál deinstallierst oder seine Daten in den Android-Einstellungen löschst, wird alles gelöscht, was es auf dem Handy gespeichert hat. Der Entwickler hat keine Kopie deiner Daten, auf unserer Seite gibt es also nichts zu löschen.</p>
+
+    <h3>Kinder</h3>
+    <p>Kapitál ist für Erwachsene gedacht und richtet sich nicht an Kinder.</p>
+
+    <h3>Änderungen</h3>
+    <p>Ändert sich diese Erklärung, wird die neue Fassung auf dieser Seite mit einem neuen Gültigkeitsdatum veröffentlicht.</p>
+
+    <h3>Kontakt</h3>
+    <p>Fragen zum Datenschutz: <a href="mailto:ganjubasic314@gmail.com">ganjubasic314@gmail.com</a></p>
+  </section>
+
+  <section id="fr" lang="fr">
+    <h2>Politique de confidentialité</h2>
+    <p class="date">En vigueur à compter du 3 octobre 2026</p>
+    <p class="lead">Kapitál est une application de finances personnelles pour Android qui montre votre patrimoine et vos dépenses. Cette politique explique ce qu’il advient de vos données. En bref&nbsp;: tout reste sur votre téléphone. Le développeur ne collecte, ne reçoit, ne stocke, ne partage ni ne vend aucune de vos données.</p>
+
+    <h3>Les données que vous ajoutez</h3>
+    <p>Vous décidez de ce qui entre dans Kapitál&nbsp;: les relevés de banque, de courtier et de plateforme crypto que vous choisissez d’importer (fichiers CSV, Excel, PDF ou ZIP), ainsi que les comptes, soldes, opérations, positions, catégories, objectifs, notes et réglages que vous créez ou modifiez. Les relevés sont lus sur votre téléphone&nbsp;; les fichiers eux-mêmes ne sont envoyés nulle part.</p>
+
+    <h3>Où elles sont stockées</h3>
+    <p>Tout est conservé uniquement sur votre téléphone, dans une base de données chiffrée avec SQLCipher (AES-256). La clé de chiffrement est conservée dans le stockage sécurisé des clés du téléphone. Kapitál n’a ni comptes utilisateurs ni serveurs et ne participe pas à la sauvegarde automatique d’Android dans le cloud, vos données ne sont donc pas non plus copiées sur Google Drive.</p>
+
+    <h3>Ce qui passe par Internet</h3>
+    <p>Kapitál ne télécharge que des données publiques&nbsp;:</p>
+    <ul>
+      <li>les taux de change de la Banque nationale tchèque, de la Banque nationale d’Ukraine et de la Banque centrale européenne&nbsp;;</li>
+      <li>l’inflation et les taux directeurs de la Banque des règlements internationaux et de la Banque nationale d’Ukraine&nbsp;;</li>
+      <li>les cours actuels des cryptos issus des données de marché publiques de Binance&nbsp;: quand vous importez un relevé Binance et, si vous suivez des cryptos dans l’app, tant qu’elle est ouverte, au plus une fois par heure. Une seule requête renvoie les cours de toutes les cryptos à la fois&nbsp;: elle ne révèle donc ni lesquelles vous détenez ni combien.</li>
+    </ul>
+    <p>Ces requêtes ne contiennent rien de vos comptes ni de vos opérations. Comme pour toute requête sur Internet, ces organismes voient l’adresse IP de votre appareil et la traitent selon leurs propres règles de confidentialité.</p>
+    <p>Kapitál ne contient ni publicité, ni outils d’analyse, ni rapports de plantage automatiques, ni suivi, ni SDK tiers qui collectent des données.</p>
+
+    <h3>Sauvegardes et fichiers que vous partagez</h3>
+    <p>Quand vous exportez une sauvegarde, Kapitál crée un fichier contenant toutes vos données et ouvre le menu de partage du téléphone&nbsp;; c’est vous qui choisissez sa destination. Restaurer une sauvegarde remplace les données de l’app.</p>
+    <p>Si vous activez les copies automatiques, vous choisissez un dossier dans le sélecteur de dossiers d’Android, et Kapitál n’a accès qu’à ce dossier. Il y enregistre une sauvegarde une fois par jour à l’ouverture de l’app et après chaque import, et garde les sept dernières. Elles restent dans le dossier jusqu’à ce que vous les supprimiez, même après la désinstallation de Kapitál. Si le dossier est synchronisé avec un service cloud, la politique de confidentialité de ce service s’applique aux copies.</p>
+    <p>Les sauvegardes ne sont chiffrées que si vous définissez un mot de passe des sauvegardes. Chaque fichier de sauvegarde et chaque copie automatique est alors chiffré en AES-256-GCM, avec une clé dérivée de votre mot de passe (PBKDF2, 600&nbsp;000 itérations). Le mot de passe lui-même n’est pas conservé&nbsp;; la clé dérivée est gardée dans le stockage sécurisé des clés du téléphone afin de chiffrer aussi les copies automatiques. Sans le mot de passe, personne ne peut ouvrir une sauvegarde chiffrée, pas même le développeur. Sans mot de passe, les fichiers de sauvegarde ne sont pas chiffrés&nbsp;: gardez-les en lieu sûr.</p>
+
+    <h3>Rappels et widget de l’écran d’accueil</h3>
+    <p>Les rappels de paiements, de plafonds et de relevés sont calculés et programmés sur votre téléphone et affichés comme des notifications Android ordinaires&nbsp;; aucun service de notification ni serveur n’intervient. Vous pouvez les désactiver dans l’app ou dans les réglages d’Android.</p>
+    <p>Si vous ajoutez le widget Kapitál à l’écran d’accueil, il affiche votre patrimoine, ce qui reste dans vos plafonds et le prochain paiement régulier. Pour pouvoir l’afficher quand l’app est fermée, Kapitál conserve un bref résumé de ces chiffres dans le stockage sécurisé du téléphone. Toute personne qui voit votre écran d’accueil les voit aussi{N}; c’est pourquoi, quand le verrouillage de l’app est activé, le widget n’affiche aucun montant.</p>
+
+    <h3>Signaler un problème</h3>
+    <p>Kapitál garde sur votre téléphone une courte note technique sur la dernière erreur&nbsp;: le message d’erreur, l’endroit du code de l’app où elle s’est produite et, pour un relevé illisible, la raison et le type de fichier (par exemple .pdf). Elle ne contient jamais de montants, de noms de comptes ni le contenu de fichiers. Quand vous touchez «&nbsp;Signaler un problème&nbsp;», Kapitál ouvre votre app de messagerie avec un brouillon adressé au développeur&nbsp;: votre description, les versions de l’app et d’Android, le modèle du téléphone, la langue de l’app et cette note. Rien n’est envoyé tant que vous n’envoyez pas l’e-mail vous-même. Si vous le faites, le développeur le reçoit avec votre adresse e-mail et ne l’utilise que pour vous répondre et corriger le problème.</p>
+
+    <h3>Verrouillage de l’app</h3>
+    <p>Si vous activez le verrouillage, votre téléphone vérifie votre empreinte ou votre visage avec sa propre fenêtre système. Kapitál n’a jamais accès à vos données biométriques.</p>
+
+    <h3>Supprimer vos données</h3>
+    <p>Vous pouvez supprimer opérations, comptes et objectifs dans l’app à tout moment. Désinstaller Kapitál, ou effacer ses données dans les réglages d’Android, supprime tout ce qu’il a stocké sur le téléphone. Le développeur n’a aucune copie de vos données&nbsp;: il n’y a donc rien à supprimer de notre côté.</p>
+
+    <h3>Enfants</h3>
+    <p>Kapitál est destiné aux adultes et ne s’adresse pas aux enfants.</p>
+
+    <h3>Modifications</h3>
+    <p>Si cette politique change, la nouvelle version sera publiée sur cette page avec une nouvelle date d’entrée en vigueur.</p>
+
+    <h3>Contact</h3>
+    <p>Questions sur la confidentialité&nbsp;: <a href="mailto:ganjubasic314@gmail.com">ganjubasic314@gmail.com</a></p>
+  </section>
+
+  <section id="it" lang="it">
+    <h2>Informativa sulla privacy</h2>
+    <p class="date">In vigore dal 3 ottobre 2026</p>
+    <p class="lead">Kapitál è un’app di finanza personale per Android che mostra il tuo patrimonio e le tue spese. Questa informativa spiega cosa succede ai tuoi dati. In breve: tutto resta sul tuo telefono. Lo sviluppatore non raccoglie, riceve, conserva, condivide né vende alcun tuo dato.</p>
+
+    <h3>I dati che aggiungi all’app</h3>
+    <p>Decidi tu cosa entra in Kapitál: gli estratti conto di banche, broker ed exchange di criptovalute che scegli di importare (file CSV, Excel, PDF o ZIP), e i conti, saldi, movimenti, posizioni, categorie, obiettivi, note e impostazioni che crei o modifichi. Gli estratti conto vengono letti sul tuo telefono; i file non vengono caricati da nessuna parte.</p>
+
+    <h3>Dove vengono conservati</h3>
+    <p>Tutto viene conservato solo sul tuo telefono, in un database cifrato con SQLCipher (AES-256). La chiave di cifratura è conservata nell’archivio sicuro delle chiavi del telefono. Kapitál non ha account utente né server e non partecipa al backup automatico di Android nel cloud, quindi i tuoi dati non vengono copiati nemmeno su Google Drive.</p>
+
+    <h3>Cosa passa da Internet</h3>
+    <p>Kapitál scarica solo dati pubblici:</p>
+    <ul>
+      <li>i tassi di cambio della Banca nazionale ceca, della Banca nazionale dell’Ucraina e della Banca centrale europea;</li>
+      <li>l’inflazione e i tassi di riferimento della Banca dei regolamenti internazionali e della Banca nazionale dell’Ucraina;</li>
+      <li>i prezzi attuali delle criptovalute dai dati di mercato pubblici di Binance: quando importi un estratto Binance e, se tieni criptovalute nell’app, mentre l’app è aperta, al massimo una volta all’ora. Una sola richiesta restituisce i prezzi di tutte le monete insieme, quindi non rivela quali possiedi né quante.</li>
+    </ul>
+    <p>Queste richieste non contengono nulla dei tuoi conti o movimenti. Come per qualsiasi richiesta su Internet, questi enti vedono l’indirizzo IP del tuo dispositivo e lo trattano secondo le proprie regole sulla privacy.</p>
+    <p>Kapitál non contiene pubblicità, analisi, segnalazioni automatiche di arresti anomali né tracciamento, né SDK di terze parti che raccolgono dati.</p>
+
+    <h3>Backup e file che condividi</h3>
+    <p>Quando esporti un backup, Kapitál crea un file con tutti i tuoi dati e apre il menu di condivisione del telefono; dove salvarlo lo decidi tu. Il ripristino di un backup sostituisce i dati nell’app.</p>
+    <p>Se attivi le copie automatiche, scegli una cartella nel selettore di cartelle di Android e Kapitál ottiene accesso solo a quella cartella. Una volta al giorno all’apertura dell’app e dopo ogni importazione vi salva un file di backup e tiene gli ultimi sette. Restano nella cartella finché non li elimini, anche dopo la disinstallazione di Kapitál. Se la cartella si sincronizza con un servizio cloud, alle copie si applica l’informativa sulla privacy di quel servizio.</p>
+    <p>I backup sono cifrati solo se imposti una password dei backup. In quel caso ogni file di backup e ogni copia automatica viene cifrato con AES-256-GCM, con una chiave derivata dalla tua password (PBKDF2, 600.000 iterazioni). La password non viene conservata; la chiave derivata è tenuta nell’archivio sicuro delle chiavi del telefono, così che anche le copie automatiche possano essere cifrate. Senza la password nessuno può aprire un backup cifrato, nemmeno lo sviluppatore. Senza password i file di backup non sono cifrati, quindi conservali in un luogo sicuro.</p>
+
+    <h3>Promemoria e widget nella schermata Home</h3>
+    <p>I promemoria su pagamenti, limiti ed estratti conto vengono calcolati e programmati sul tuo telefono e mostrati come normali notifiche Android; non è coinvolto alcun servizio di notifica né server. Puoi disattivarli nell’app o nelle impostazioni di Android.</p>
+    <p>Se aggiungi il widget di Kapitál alla schermata Home, mostra il tuo patrimonio, quanto resta nei tuoi limiti e il prossimo pagamento ricorrente. Per poterlo disegnare anche ad app chiusa, Kapitál conserva un breve riepilogo di queste cifre nell’archivio sicuro del telefono. Chiunque veda la tua schermata Home le vede a sua volta; per questo, quando il blocco dell’app è attivo, il widget non mostra importi.</p>
+
+    <h3>Segnalare un problema</h3>
+    <p>Kapitál conserva sul telefono una breve nota tecnica sull’ultimo errore: il messaggio di errore, il punto del codice dell’app in cui si è verificato e, per un estratto conto che non è stato possibile leggere, il motivo e il tipo di file (ad esempio .pdf). Non contiene mai importi, nomi di conti né il contenuto dei file. Quando tocchi «Segnala un problema», Kapitál apre la tua app di posta con una bozza indirizzata allo sviluppatore: la tua descrizione, le versioni dell’app e di Android, il modello del telefono, la lingua dell’app e quella nota. Non viene inviato nulla finché non invii tu l’email. Se lo fai, lo sviluppatore la riceve insieme al tuo indirizzo email e la usa solo per risponderti e risolvere il problema.</p>
+
+    <h3>Blocco dell’app</h3>
+    <p>Se attivi il blocco dell’app, il telefono verifica la tua impronta o il tuo volto con la propria finestra di sistema. Kapitál non ha mai accesso ai tuoi dati biometrici.</p>
+
+    <h3>Eliminare i tuoi dati</h3>
+    <p>Puoi eliminare movimenti, conti e obiettivi nell’app in qualsiasi momento. Disinstallando Kapitál, o cancellandone i dati nelle impostazioni di Android, viene eliminato tutto ciò che ha salvato sul telefono. Lo sviluppatore non ha copie dei tuoi dati, quindi dalla nostra parte non c’è nulla da eliminare.</p>
+
+    <h3>Minori</h3>
+    <p>Kapitál è pensato per gli adulti e non è rivolto ai minori.</p>
+
+    <h3>Modifiche</h3>
+    <p>Se questa informativa cambia, la nuova versione sarà pubblicata su questa pagina con una nuova data di entrata in vigore.</p>
+
+    <h3>Contatti</h3>
+    <p>Domande sulla privacy: <a href="mailto:ganjubasic314@gmail.com">ganjubasic314@gmail.com</a></p>
+  </section>
+
   <section id="cs" lang="cs">
     <h2>Zásady ochrany osobních údajů</h2>
     <p class="date">Účinné od 3. října 2026</p>
     <p class="lead">Kapitál je aplikace pro osobní finance pro Android, která ukazuje váš čistý majetek a výdaje. Tyto zásady vysvětlují, co se děje s vašimi daty. Stručně: vše zůstává ve vašem telefonu. Vývojář žádná vaše data neshromažďuje, nepřijímá, neukládá, nesdílí ani neprodává.</p>
 
     <h3>Data, která do aplikace vložíte</h3>
-    <p>O tom, co se do Kapitálu dostane, rozhodujete vy: výpisy z banky, od brokera a z kryptoburzy, které se rozhodnete importovat (soubory CSV, Excel, PDF nebo ZIP), a účty, zůstatky, transakce, pozice, kategorie, poznámky a nastavení, které vytvoříte nebo upravíte. Výpisy se čtou ve vašem telefonu; samotné soubory se nikam nenahrávají.</p>
+    <p>O tom, co se do Kapitálu dostane, rozhodujete vy: výpisy z banky, od brokera a z kryptoburzy, které se rozhodnete importovat (soubory CSV, Excel, PDF nebo ZIP), a účty, zůstatky, transakce, pozice, kategorie, cíle, poznámky a nastavení, které vytvoříte nebo upravíte. Výpisy se čtou ve vašem telefonu; samotné soubory se nikam nenahrávají.</p>
 
     <h3>Kde jsou uložena</h3>
     <p>Vše je uloženo pouze ve vašem telefonu, v databázi šifrované pomocí SQLCipher (AES-256). Šifrovací klíč je uložen v zabezpečeném úložišti klíčů telefonu. Kapitál nemá uživatelské účty ani servery a nepoužívá automatické zálohování Androidu do cloudu, takže se vaše data nekopírují ani na Disk Google.</p>
@@ -163,17 +324,25 @@
       <li>aktuální ceny kryptoměn z veřejných tržních dat Binance: když importujete výpis z Binance, a pokud v aplikaci evidujete kryptoměny, i během jejího používání, nejvýš jednou za hodinu. Jeden požadavek vrátí ceny všech mincí najednou, takže neprozradí, které držíte, ani kolik.</li>
     </ul>
     <p>Tyto požadavky neobsahují nic z vašich účtů ani transakcí. Jako u každého požadavku přes internet tyto instituce vidí IP adresu vašeho zařízení a nakládají s ní podle svých vlastních zásad.</p>
-    <p>Kapitál neobsahuje reklamu, analytiku, hlášení pádů ani sledování a žádné SDK třetích stran, která by shromažďovala data.</p>
+    <p>Kapitál neobsahuje reklamu, analytiku, automatické hlášení pádů ani sledování a žádné SDK třetích stran, která by shromažďovala data.</p>
 
     <h3>Zálohy a soubory, které sdílíte</h3>
-    <p>Při exportu zálohy Kapitál vytvoří soubor se všemi vašimi daty a otevře nabídku sdílení; kam ho uložíte, rozhodnete vy. Soubor zálohy není šifrovaný, uchovávejte ho proto na bezpečném místě. Obnovení ze zálohy nahradí data v aplikaci.</p>
-    <p>Pokud zapnete automatickou zálohu, vyberete složku ve výběru složek samotného Androidu a Kapitál získá přístup pouze k ní. Jednou denně při otevření aplikace a po každém importu do ní uloží soubor zálohy a ponechá posledních sedm. Ani tyto zálohy nejsou šifrované. Zůstávají ve složce, dokud je nesmažete, i po odinstalování Kapitálu. Pokud se složka synchronizuje do cloudové služby, na zálohy se vztahují zásady ochrany soukromí této služby.</p>
+    <p>Při exportu zálohy Kapitál vytvoří soubor se všemi vašimi daty a otevře nabídku sdílení; kam ho uložíte, rozhodnete vy. Obnovení ze zálohy nahradí data v aplikaci.</p>
+    <p>Pokud zapnete automatickou zálohu, vyberete složku ve výběru složek samotného Androidu a Kapitál získá přístup pouze k ní. Jednou denně při otevření aplikace a po každém importu do ní uloží soubor zálohy a ponechá posledních sedm. Zálohy zůstávají ve složce, dokud je nesmažete, i po odinstalování Kapitálu. Pokud se složka synchronizuje do cloudové služby, na zálohy se vztahují zásady ochrany soukromí této služby.</p>
+    <p>Zálohy jsou šifrované, jen pokud nastavíte heslo záloh. Pak se každý soubor zálohy i každá automatická záloha šifruje algoritmem AES-256-GCM klíčem odvozeným z vašeho hesla (PBKDF2, 600 000 iterací). Samotné heslo se neukládá; odvozený klíč je uložen v zabezpečeném úložišti klíčů telefonu, aby se mohly šifrovat i automatické zálohy. Bez hesla šifrovanou zálohu nikdo neotevře, ani vývojář. Bez nastaveného hesla soubory záloh šifrované nejsou, uchovávejte je proto na bezpečném místě.</p>
+
+    <h3>Připomínky a widget na ploše</h3>
+    <p>Připomínky plateb, limitů a výpisů se počítají a plánují ve vašem telefonu a zobrazují se jako běžná oznámení Androidu; nepodílí se na nich žádná notifikační služba ani server. Vypnout je můžete v aplikaci nebo v nastavení Androidu.</p>
+    <p>Pokud si přidáte widget Kapitálu na plochu, ukazuje vaše čisté jmění, kolik zbývá z limitů, a nejbližší pravidelnou platbu. Aby se mohl vykreslit i při zavřené aplikaci, Kapitál si tyto údaje drží ve stručném souhrnu v zabezpečeném úložišti telefonu. Kdo vidí vaši plochu, uvidí je také; proto při zapnutém zámku aplikace widget žádné částky neukazuje.</p>
+
+    <h3>Nahlášení problému</h3>
+    <p>Kapitál uchovává ve vašem telefonu krátkou technickou poznámku o poslední chybě: text chyby, místo v kódu aplikace, kde nastala, a u výpisu, který se nepodařilo přečíst, důvod a typ souboru (například .pdf). Nikdy neobsahuje částky, názvy účtů ani obsah souborů. Když klepnete na „Nahlásit problém“, Kapitál otevře vaši e-mailovou aplikaci s konceptem zprávy vývojáři: váš popis, verze aplikace a Androidu, model telefonu, jazyk aplikace a tato poznámka. Nic se neodešle, dokud e-mail sami neodešlete. Pokud ho odešlete, vývojář ho dostane i s vaší e-mailovou adresou a použije ho jen k odpovědi a opravě problému.</p>
 
     <h3>Zámek aplikace</h3>
     <p>Pokud zapnete zámek aplikace, telefon ověří váš otisk prstu nebo obličej vlastním systémovým dialogem. Kapitál k vašim biometrickým údajům nikdy nemá přístup.</p>
 
     <h3>Smazání dat</h3>
-    <p>Transakce a účty můžete v aplikaci kdykoli smazat. Odinstalováním Kapitálu nebo vymazáním jeho dat v nastavení Androidu se smaže vše, co aplikace uložila. Vývojář žádnou kopii vašich dat nemá, takže na naší straně není co mazat.</p>
+    <p>Transakce, účty a cíle můžete v aplikaci kdykoli smazat. Odinstalováním Kapitálu nebo vymazáním jeho dat v nastavení Androidu se smaže vše, co aplikace v telefonu uložila. Vývojář žádnou kopii vašich dat nemá, takže na naší straně není co mazat.</p>
 
     <h3>Děti</h3>
     <p>Kapitál je určen dospělým a není zaměřen na děti.</p>
@@ -185,13 +354,160 @@
     <p>Dotazy k ochraně soukromí: <a href="mailto:ganjubasic314@gmail.com">ganjubasic314@gmail.com</a></p>
   </section>
 
+  <section id="da" lang="da">
+    <h2>Privatlivspolitik</h2>
+    <p class="date">Gældende fra 3. oktober 2026</p>
+    <p class="lead">Kapitál er en app til privatøkonomi til Android, der viser din formue og dit forbrug. Denne politik forklarer, hvad der sker med dine data. Kort sagt: Alt bliver på din telefon. Udvikleren indsamler, modtager, gemmer, deler eller sælger ingen af dine data.</p>
+
+    <h3>Data, du tilføjer i appen</h3>
+    <p>Du bestemmer, hvad der kommer ind i Kapitál: kontoudtog fra banker, mæglere og kryptobørser, som du vælger at importere (CSV-, Excel-, PDF- eller ZIP-filer), og de konti, saldi, posteringer, beholdninger, kategorier, sparemål, noter og indstillinger, du opretter eller ændrer. Kontoudtog læses på din telefon; selve filerne uploades ingen steder.</p>
+
+    <h3>Hvor de gemmes</h3>
+    <p>Alt gemmes kun på din telefon i en database, der er krypteret med SQLCipher (AES-256). Krypteringsnøglen ligger i telefonens sikre nøglelager. Kapitál har ingen brugerkonti og ingen servere og fravælger Androids automatiske sikkerhedskopiering til skyen, så dine data heller ikke kopieres til Google Drev.</p>
+
+    <h3>Hvad der sendes over internettet</h3>
+    <p>Kapitál henter kun offentlige data:</p>
+    <ul>
+      <li>valutakurser fra Tjekkiets Nationalbank, Ukraines Nationalbank og Den Europæiske Centralbank;</li>
+      <li>inflation og centralbankrenter fra Bank for International Settlements og Ukraines Nationalbank;</li>
+      <li>aktuelle kryptokurser fra Binances offentlige markedsdata: når du importerer et udtog fra Binance, og, hvis du har krypto i appen, mens appen er åben, højst én gang i timen. Én forespørgsel returnerer kurserne for alle mønter på én gang og afslører derfor ikke, hvilke du ejer, eller hvor mange.</li>
+    </ul>
+    <p>Disse forespørgsler indeholder intet fra dine konti eller posteringer. Som ved enhver forespørgsel over internettet ser disse organisationer din enheds IP-adresse og behandler den efter deres egne privatlivsregler.</p>
+    <p>Kapitál indeholder ingen reklamer, ingen analyse, ingen automatiske nedbrudsrapporter og ingen sporing og ingen SDK’er fra tredjeparter, der indsamler data.</p>
+
+    <h3>Sikkerhedskopier og filer, du deler</h3>
+    <p>Når du eksporterer en sikkerhedskopi, laver Kapitál en fil med alle dine data og åbner telefonens delingsmenu; du bestemmer, hvor den skal hen. Gendannelse fra en sikkerhedskopi erstatter dataene i appen.</p>
+    <p>Slår du automatiske kopier til, vælger du en mappe i Androids egen mappevælger, og Kapitál får kun adgang til den mappe. Én gang om dagen, når appen åbnes, og efter hver import gemmer den en sikkerhedskopi der og beholder de syv seneste. De bliver i mappen, indtil du sletter dem, også efter du har afinstalleret Kapitál. Synkroniseres mappen med en skytjeneste, gælder tjenestens egen privatlivspolitik for kopierne.</p>
+    <p>Sikkerhedskopier krypteres kun, hvis du vælger en adgangskode til sikkerhedskopier. Så krypteres hver sikkerhedskopi og hver automatisk kopi med AES-256-GCM med en nøgle afledt af din adgangskode (PBKDF2, 600.000 iterationer). Selve adgangskoden gemmes ikke; den afledte nøgle ligger i telefonens sikre nøglelager, så automatiske kopier også kan krypteres. Uden adgangskoden kan ingen åbne en krypteret sikkerhedskopi, heller ikke udvikleren. Uden adgangskode er sikkerhedskopierne ikke krypterede, så opbevar dem et sikkert sted.</p>
+
+    <h3>Påmindelser og widgetten på hjemmeskærmen</h3>
+    <p>Påmindelser om betalinger, grænser og kontoudtog beregnes og planlægges på din telefon og vises som almindelige Android-notifikationer; ingen notifikationstjeneste eller server er involveret. Du kan slå dem fra i appen eller i Androids indstillinger.</p>
+    <p>Tilføjer du Kapitál-widgetten på hjemmeskærmen, viser den din formue, hvad der er tilbage inden for dine grænser, og den næste faste betaling. For at kunne tegne den, mens appen er lukket, gemmer Kapitál et kort resumé af disse tal i telefonens sikre lager. Alle, der ser din hjemmeskærm, kan også se dem; derfor viser widgetten ingen beløb, mens appens lås er slået til.</p>
+
+    <h3>Rapportér et problem</h3>
+    <p>Kapitál gemmer en kort teknisk note om den seneste fejl på din telefon: fejlmeddelelsen, hvor i appens kode den opstod, og for et kontoudtog, der ikke kunne læses, årsagen og filtypen (f.eks. .pdf). Den indeholder aldrig beløb, kontonavne eller filindhold. Når du trykker på „Rapportér et problem“, åbner Kapitál din mailapp med et udkast til udvikleren: din beskrivelse, versionerne af appen og Android, telefonmodellen, appens sprog og noten. Intet sendes, medmindre du selv sender mailen. Gør du det, modtager udvikleren den sammen med din mailadresse og bruger den kun til at svare og rette problemet.</p>
+
+    <h3>Applås</h3>
+    <p>Slår du applåsen til, tjekker telefonen dit fingeraftryk eller ansigt med sin egen systemdialog. Kapitál får aldrig adgang til dine biometriske data.</p>
+
+    <h3>Sletning af dine data</h3>
+    <p>Du kan til enhver tid slette posteringer, konti og sparemål i appen. Afinstallerer du Kapitál eller rydder dens data i Androids indstillinger, slettes alt, hvad den har gemt på telefonen. Udvikleren har ingen kopi af dine data, så der er intet at slette hos os.</p>
+
+    <h3>Børn</h3>
+    <p>Kapitál er beregnet til voksne og henvender sig ikke til børn.</p>
+
+    <h3>Ændringer</h3>
+    <p>Ændres denne politik, offentliggøres den nye version på denne side med en ny gældende dato.</p>
+
+    <h3>Kontakt</h3>
+    <p>Spørgsmål om privatliv: <a href="mailto:ganjubasic314@gmail.com">ganjubasic314@gmail.com</a></p>
+  </section>
+
+  <section id="nb" lang="nb">
+    <h2>Personvernerklæring</h2>
+    <p class="date">Gjelder fra 3. oktober 2026</p>
+    <p class="lead">Kapitál er en app for privatøkonomi for Android som viser formuen og forbruket ditt. Denne erklæringen forklarer hva som skjer med dataene dine. Kort sagt: Alt blir værende på telefonen din. Utvikleren samler ikke inn, mottar, lagrer, deler eller selger noen av dataene dine.</p>
+
+    <h3>Data du legger inn i appen</h3>
+    <p>Du bestemmer hva som havner i Kapitál: kontoutskrifter fra banker, meglere og kryptobørser som du velger å importere (CSV-, Excel-, PDF- eller ZIP-filer), og kontoene, saldoene, transaksjonene, beholdningene, kategoriene, sparemålene, notatene og innstillingene du oppretter eller endrer. Kontoutskrifter leses på telefonen din; selve filene lastes ikke opp noe sted.</p>
+
+    <h3>Hvor de lagres</h3>
+    <p>Alt lagres bare på telefonen din, i en database kryptert med SQLCipher (AES-256). Krypteringsnøkkelen ligger i telefonens sikre nøkkellager. Kapitál har ingen brukerkontoer og ingen servere og reserverer seg mot Androids automatiske sikkerhetskopiering til skyen, så dataene dine kopieres heller ikke til Google Disk.</p>
+
+    <h3>Hva som går over internett</h3>
+    <p>Kapitál laster bare ned offentlige data:</p>
+    <ul>
+      <li>valutakurser fra Tsjekkias nasjonalbank, Ukrainas nasjonalbank og Den europeiske sentralbanken;</li>
+      <li>inflasjon og styringsrenter fra Den internasjonale oppgjørsbanken og Ukrainas nasjonalbank;</li>
+      <li>nåværende kryptokurser fra Binances offentlige markedsdata: når du importerer en utskrift fra Binance, og, hvis du har krypto i appen, mens appen er åpen, høyst én gang i timen. Én forespørsel returnerer kursene for alle mynter på én gang og avslører derfor ikke hvilke du eier, eller hvor mange.</li>
+    </ul>
+    <p>Disse forespørslene inneholder ingenting fra kontoene eller transaksjonene dine. Som ved enhver forespørsel over internett ser disse organisasjonene IP-adressen til enheten din og behandler den etter sine egne personvernregler.</p>
+    <p>Kapitál inneholder ingen reklame, ingen analyse, ingen automatiske krasjrapporter og ingen sporing, og ingen SDK-er fra tredjeparter som samler inn data.</p>
+
+    <h3>Sikkerhetskopier og filer du deler</h3>
+    <p>Når du eksporterer en sikkerhetskopi, lager Kapitál en fil med alle dataene dine og åpner delingsmenyen på telefonen; du bestemmer hvor den skal. Gjenoppretting fra en sikkerhetskopi erstatter dataene i appen.</p>
+    <p>Slår du på automatiske kopier, velger du en mappe i Androids egen mappevelger, og Kapitál får bare tilgang til den mappen. Én gang om dagen når appen åpnes, og etter hver import, lagrer den en sikkerhetskopi der og beholder de sju siste. De blir værende i mappen til du sletter dem, også etter at du har avinstallert Kapitál. Synkroniseres mappen med en skytjeneste, gjelder tjenestens egen personvernerklæring for kopiene.</p>
+    <p>Sikkerhetskopier krypteres bare hvis du velger et passord for sikkerhetskopier. Da krypteres hver sikkerhetskopi og hver automatiske kopi med AES-256-GCM med en nøkkel avledet fra passordet ditt (PBKDF2, 600 000 iterasjoner). Selve passordet lagres ikke; den avledede nøkkelen ligger i telefonens sikre nøkkellager, slik at også automatiske kopier kan krypteres. Uten passordet kan ingen åpne en kryptert sikkerhetskopi, heller ikke utvikleren. Uten passord er sikkerhetskopiene ikke kryptert, så oppbevar dem et trygt sted.</p>
+
+    <h3>Påminnelser og modulen på startskjermen</h3>
+    <p>Påminnelser om betalinger, grenser og kontoutskrifter regnes ut og planlegges på telefonen din og vises som vanlige Android-varsler; ingen varslingstjeneste eller server er involvert. Du kan slå dem av i appen eller i Android-innstillingene.</p>
+    <p>Legger du Kapitál-modulen på startskjermen, viser den formuen din, hva som er igjen innenfor grensene dine, og neste faste betaling. For å kunne tegne den mens appen er lukket, holder Kapitál et kort sammendrag av disse tallene i telefonens sikre lagring. Alle som ser startskjermen din, ser dem også; derfor viser modulen ingen beløp mens applåsen er slått på.</p>
+
+    <h3>Rapportere et problem</h3>
+    <p>Kapitál lagrer et kort teknisk notat om den siste feilen på telefonen din: feilmeldingen, hvor i appens kode den oppstod, og for en kontoutskrift som ikke kunne leses, årsaken og filtypen (f.eks. .pdf). Det inneholder aldri beløp, kontonavn eller filinnhold. Når du trykker på «Rapporter et problem», åpner Kapitál e-postappen din med et utkast til utvikleren: beskrivelsen din, versjonene av appen og Android, telefonmodellen, appens språk og notatet. Ingenting sendes med mindre du sender e-posten selv. Gjør du det, mottar utvikleren den sammen med e-postadressen din og bruker den bare til å svare og rette problemet.</p>
+
+    <h3>Applås</h3>
+    <p>Slår du på applåsen, sjekker telefonen fingeravtrykket eller ansiktet ditt med sin egen systemdialog. Kapitál får aldri tilgang til de biometriske dataene dine.</p>
+
+    <h3>Slette dataene dine</h3>
+    <p>Du kan når som helst slette transaksjoner, kontoer og sparemål i appen. Avinstallerer du Kapitál eller tømmer dataene i Android-innstillingene, slettes alt den har lagret på telefonen. Utvikleren har ingen kopi av dataene dine, så det er ingenting å slette hos oss.</p>
+
+    <h3>Barn</h3>
+    <p>Kapitál er laget for voksne og retter seg ikke mot barn.</p>
+
+    <h3>Endringer</h3>
+    <p>Endres denne erklæringen, publiseres den nye versjonen på denne siden med en ny dato for når den gjelder fra.</p>
+
+    <h3>Kontakt</h3>
+    <p>Spørsmål om personvern: <a href="mailto:ganjubasic314@gmail.com">ganjubasic314@gmail.com</a></p>
+  </section>
+
+  <section id="sv" lang="sv">
+    <h2>Integritetspolicy</h2>
+    <p class="date">Gäller från 3 oktober 2026</p>
+    <p class="lead">Kapitál är en app för privatekonomi för Android som visar din förmögenhet och dina utgifter. Den här policyn förklarar vad som händer med dina data. Kort sagt: allt stannar i din telefon. Utvecklaren samlar inte in, tar emot, lagrar, delar eller säljer några av dina data.</p>
+
+    <h3>Data du lägger till i appen</h3>
+    <p>Du bestämmer vad som hamnar i Kapitál: kontoutdrag från banker, mäklare och kryptobörser som du väljer att importera (CSV-, Excel-, PDF- eller ZIP-filer), och de konton, saldon, transaktioner, innehav, kategorier, sparmål, anteckningar och inställningar du skapar eller ändrar. Kontoutdrag läses i din telefon; själva filerna laddas inte upp någonstans.</p>
+
+    <h3>Var de lagras</h3>
+    <p>Allt lagras bara i din telefon, i en databas krypterad med SQLCipher (AES-256). Krypteringsnyckeln förvaras i telefonens säkra nyckellager. Kapitál har inga användarkonton och inga servrar och avstår från Androids automatiska säkerhetskopiering till molnet, så dina data kopieras inte heller till Google Drive.</p>
+
+    <h3>Vad som går över internet</h3>
+    <p>Kapitál laddar bara ner offentliga data:</p>
+    <ul>
+      <li>växelkurser från Tjeckiens centralbank, Ukrainas centralbank och Europeiska centralbanken;</li>
+      <li>inflation och styrräntor från Banken för internationell betalningsutjämning och Ukrainas centralbank;</li>
+      <li>aktuella kryptokurser från Binances offentliga marknadsdata: när du importerar ett utdrag från Binance och, om du har krypto i appen, medan appen är öppen, högst en gång i timmen. En förfrågan returnerar kurserna för alla mynt på en gång och avslöjar därför inte vilka du äger eller hur många.</li>
+    </ul>
+    <p>De här förfrågningarna innehåller inget från dina konton eller transaktioner. Som vid alla förfrågningar över internet ser dessa organisationer din enhets IP-adress och hanterar den enligt sina egna integritetsregler.</p>
+    <p>Kapitál innehåller ingen reklam, ingen analys, inga automatiska kraschrapporter och ingen spårning, och inga SDK:er från tredje part som samlar in data.</p>
+
+    <h3>Säkerhetskopior och filer du delar</h3>
+    <p>När du exporterar en säkerhetskopia skapar Kapitál en fil med alla dina data och öppnar telefonens delningsmeny; du bestämmer vart den ska. Att återställa från en säkerhetskopia ersätter data i appen.</p>
+    <p>Slår du på automatiska kopior väljer du en mapp i Androids egen mappväljare, och Kapitál får bara åtkomst till den mappen. En gång om dagen när appen öppnas, och efter varje import, sparar den en säkerhetskopia där och behåller de sju senaste. De ligger kvar i mappen tills du raderar dem, även efter att du har avinstallerat Kapitál. Synkas mappen med en molntjänst gäller tjänstens egen integritetspolicy för kopiorna.</p>
+    <p>Säkerhetskopior krypteras bara om du väljer ett lösenord för säkerhetskopior. Då krypteras varje säkerhetskopia och varje automatisk kopia med AES-256-GCM med en nyckel som härleds från ditt lösenord (PBKDF2, 600 000 iterationer). Själva lösenordet sparas inte; den härledda nyckeln förvaras i telefonens säkra nyckellager så att även automatiska kopior kan krypteras. Utan lösenordet kan ingen öppna en krypterad säkerhetskopia, inte heller utvecklaren. Utan lösenord är säkerhetskopiorna inte krypterade, så förvara dem på ett säkert ställe.</p>
+
+    <h3>Påminnelser och widgeten på hemskärmen</h3>
+    <p>Påminnelser om betalningar, gränser och kontoutdrag beräknas och schemaläggs i din telefon och visas som vanliga Android-aviseringar; ingen aviseringstjänst eller server är inblandad. Du kan stänga av dem i appen eller i Androids inställningar.</p>
+    <p>Lägger du till Kapitál-widgeten på hemskärmen visar den din förmögenhet, vad som är kvar inom dina gränser och nästa återkommande betalning. För att kunna rita den när appen är stängd sparar Kapitál en kort sammanfattning av siffrorna i telefonens säkra lagring. Alla som ser din hemskärm ser dem också; därför visar widgeten inga belopp när applåset är påslaget.</p>
+
+    <h3>Rapportera ett problem</h3>
+    <p>Kapitál sparar en kort teknisk anteckning om det senaste felet i din telefon: felmeddelandet, var i appens kod det inträffade och, för ett kontoutdrag som inte kunde läsas, orsaken och filtypen (t.ex. .pdf). Den innehåller aldrig belopp, kontonamn eller filinnehåll. När du trycker på ”Rapportera ett problem” öppnar Kapitál din e-postapp med ett utkast till utvecklaren: din beskrivning, versionerna av appen och Android, telefonmodellen, appens språk och anteckningen. Inget skickas om du inte skickar mejlet själv. Gör du det får utvecklaren det tillsammans med din e-postadress och använder det bara för att svara och åtgärda problemet.</p>
+
+    <h3>Applås</h3>
+    <p>Slår du på applåset kontrollerar telefonen ditt fingeravtryck eller ansikte med sin egen systemdialog. Kapitál får aldrig åtkomst till dina biometriska data.</p>
+
+    <h3>Radera dina data</h3>
+    <p>Du kan när som helst radera transaktioner, konton och sparmål i appen. Avinstallerar du Kapitál eller rensar dess data i Androids inställningar raderas allt som den har sparat i telefonen. Utvecklaren har ingen kopia av dina data, så det finns inget att radera hos oss.</p>
+
+    <h3>Barn</h3>
+    <p>Kapitál är avsedd för vuxna och riktar sig inte till barn.</p>
+
+    <h3>Ändringar</h3>
+    <p>Om den här policyn ändras publiceras den nya versionen på den här sidan med ett nytt datum för när den gäller från.</p>
+
+    <h3>Kontakt</h3>
+    <p>Frågor om integritet: <a href="mailto:ganjubasic314@gmail.com">ganjubasic314@gmail.com</a></p>
+  </section>
+
   <section id="uk" lang="uk">
     <h2>Політика конфіденційності</h2>
     <p class="date">Набуває чинності 3 жовтня 2026 р.</p>
     <p class="lead">Kapitál — застосунок для особистих фінансів на Android, який показує ваш капітал і витрати. Ця політика пояснює, що відбувається з вашими даними. Коротко: усе залишається на вашому телефоні. Розробник не збирає, не отримує, не зберігає, не передає й не продає жодних ваших даних.</p>
 
     <h3>Дані, які ви додаєте в застосунок</h3>
-    <p>Ви самі вирішуєте, що потрапляє в Kapitál: виписки з банку, від брокера та з криптобіржі, які ви вирішили імпортувати (файли CSV, Excel, PDF або ZIP), а також рахунки, залишки, операції, позиції, категорії, нотатки й налаштування, які ви створюєте чи змінюєте. Виписки читаються на телефоні; самі файли нікуди не завантажуються.</p>
+    <p>Ви самі вирішуєте, що потрапляє в Kapitál: виписки з банку, від брокера та з криптобіржі, які ви вирішили імпортувати (файли CSV, Excel, PDF або ZIP), а також рахунки, залишки, операції, позиції, категорії, цілі, нотатки й налаштування, які ви створюєте чи змінюєте. Виписки читаються на телефоні; самі файли нікуди не завантажуються.</p>
 
     <h3>Де вони зберігаються</h3>
     <p>Усе це зберігається лише на вашому телефоні, у базі даних, зашифрованій SQLCipher (AES-256). Ключ шифрування зберігається в захищеному сховищі ключів телефона. Kapitál не має облікових записів і серверів та не використовує автоматичне резервне копіювання Android у хмару, тож ваші дані не копіюються й на Google Диск.</p>
@@ -204,17 +520,25 @@
       <li>поточні ціни криптовалют із публічних ринкових даних Binance: коли ви імпортуєте виписку з Binance, а якщо ви ведете в застосунку криптовалюту, то й поки він відкритий, не частіше ніж раз на годину. Один запит повертає ціни всіх монет одразу, тож не розкриває, які саме у вас є і скільки.</li>
     </ul>
     <p>Ці запити не містять нічого з ваших рахунків чи операцій. Як і під час будь-якого запиту в інтернеті, ці організації бачать IP-адресу вашого пристрою й обробляють її за власними правилами.</p>
-    <p>У Kapitál немає реклами, аналітики, звітів про збої чи відстеження, а також сторонніх SDK, що збирають дані.</p>
+    <p>У Kapitál немає реклами, аналітики, автоматичних звітів про збої чи відстеження, а також сторонніх SDK, що збирають дані.</p>
 
     <h3>Резервні копії та файли, якими ви ділитеся</h3>
-    <p>Коли ви експортуєте резервну копію, Kapitál створює файл з усіма вашими даними й відкриває меню «Поділитися»; куди його зберегти, вирішуєте ви. Файл резервної копії не зашифрований, тож зберігайте його в надійному місці. Відновлення з резервної копії замінює дані в застосунку.</p>
-    <p>Якщо ви ввімкнете автокопію, ви вибираєте папку у вбудованому засобі вибору папок Android, і Kapitál отримує доступ лише до неї. Раз на день під час відкриття застосунку й після кожного імпорту він зберігає туди файл резервної копії та залишає останні сім. Ці копії теж не зашифровані. Вони залишаються в папці, доки ви їх не видалите, зокрема й після видалення Kapitál. Якщо папка синхронізується з хмарним сервісом, до копій застосовується політика конфіденційності цього сервісу.</p>
+    <p>Коли ви експортуєте резервну копію, Kapitál створює файл з усіма вашими даними й відкриває меню «Поділитися»; куди його зберегти, вирішуєте ви. Відновлення з резервної копії замінює дані в застосунку.</p>
+    <p>Якщо ви ввімкнете автокопію, ви вибираєте папку у вбудованому засобі вибору папок Android, і Kapitál отримує доступ лише до неї. Раз на день під час відкриття застосунку й після кожного імпорту він зберігає туди файл резервної копії та залишає останні сім. Вони залишаються в папці, доки ви їх не видалите, зокрема й після видалення Kapitál. Якщо папка синхронізується з хмарним сервісом, до копій застосовується політика конфіденційності цього сервісу.</p>
+    <p>Резервні копії шифруються, лише якщо ви задасте пароль для копій. Тоді кожен файл резервної копії й кожна автокопія шифруються за AES-256-GCM ключем, отриманим із вашого пароля (PBKDF2, 600 000 ітерацій). Сам пароль не зберігається; отриманий ключ зберігається в захищеному сховищі ключів телефона, щоб шифрувати й автокопії. Без пароля зашифровану копію не відкриє ніхто, зокрема й розробник. Без пароля файли резервних копій не зашифровані, тож зберігайте їх у надійному місці.</p>
+
+    <h3>Нагадування й віджет на головному екрані</h3>
+    <p>Нагадування про платежі, ліміти й виписки обчислюються та плануються на вашому телефоні й показуються як звичайні сповіщення Android; жоден сервіс сповіщень чи сервер у цьому не бере участі. Їх можна вимкнути в застосунку або в налаштуваннях Android.</p>
+    <p>Якщо ви додасте віджет Kapitál на головний екран, він показує ваш капітал, скільки лишилося в межах лімітів, і найближчий регулярний платіж. Щоб малювати його, коли застосунок закритий, Kapitál зберігає короткий підсумок цих цифр у захищеному сховищі телефона. Їх бачить кожен, хто бачить ваш головний екран, тому, поки ввімкнено блокування застосунку, віджет не показує сум.</p>
+
+    <h3>Повідомлення про проблему</h3>
+    <p>Kapitál зберігає на телефоні коротку технічну нотатку про останню помилку: текст помилки, місце в коді застосунку, де вона сталася, а для виписки, яку не вдалося прочитати, — причину й тип файлу (наприклад, .pdf). Вона ніколи не містить сум, назв рахунків чи вмісту файлів. Коли ви натискаєте «Повідомити про проблему», Kapitál відкриває вашу поштову програму з чернеткою листа розробникові: ваш опис, версії застосунку й Android, модель телефона, мова застосунку й ця нотатка. Нічого не надсилається, доки ви самі не надішлете лист. Якщо надішлете, розробник отримає його разом із вашою адресою й використає лише для відповіді та виправлення проблеми.</p>
 
     <h3>Блокування застосунку</h3>
     <p>Якщо ввімкнути блокування, телефон перевіряє ваш відбиток пальця чи обличчя через власне системне вікно. Kapitál ніколи не має доступу до ваших біометричних даних.</p>
 
     <h3>Видалення даних</h3>
-    <p>Операції та рахунки можна будь-коли видалити в застосунку. Якщо видалити Kapitál або очистити його дані в налаштуваннях Android, усе, що він зберігав, буде видалено. У розробника немає копії ваших даних, тож з нашого боку видаляти нічого.</p>
+    <p>Операції, рахунки й цілі можна будь-коли видалити в застосунку. Якщо видалити Kapitál або очистити його дані в налаштуваннях Android, усе, що він зберігав на телефоні, буде видалено. У розробника немає копії ваших даних, тож з нашого боку видаляти нічого.</p>
 
     <h3>Діти</h3>
     <p>Kapitál призначений для дорослих і не орієнтований на дітей.</p>
@@ -232,7 +556,7 @@
     <p class="lead">Kapitál — приложение для личных финансов на Android, которое показывает ваш капитал и расходы. Эта политика объясняет, что происходит с вашими данными. Коротко: всё остаётся на вашем телефоне. Разработчик не собирает, не получает, не хранит, не передаёт и не продаёт никакие ваши данные.</p>
 
     <h3>Данные, которые вы добавляете в приложение</h3>
-    <p>Вы сами решаете, что попадает в Kapitál: выписки из банка, от брокера и с криптобиржи, которые вы решили импортировать (файлы CSV, Excel, PDF или ZIP), а также счета, остатки, операции, позиции, категории, заметки и настройки, которые вы создаёте или меняете. Выписки читаются на телефоне; сами файлы никуда не загружаются.</p>
+    <p>Вы сами решаете, что попадает в Kapitál: выписки из банка, от брокера и с криптобиржи, которые вы решили импортировать (файлы CSV, Excel, PDF или ZIP), а также счета, остатки, операции, позиции, категории, цели, заметки и настройки, которые вы создаёте или меняете. Выписки читаются на телефоне; сами файлы никуда не загружаются.</p>
 
     <h3>Где они хранятся</h3>
     <p>Всё это хранится только на вашем телефоне, в базе данных, зашифрованной SQLCipher (AES-256). Ключ шифрования хранится в защищённом хранилище ключей телефона. У Kapitál нет учётных записей и серверов, и он не использует автоматическое резервное копирование Android в облако, поэтому ваши данные не копируются и на Google Диск.</p>
@@ -245,17 +569,25 @@
       <li>текущие цены криптовалют из публичных рыночных данных Binance: когда вы импортируете выписку с Binance, а если вы ведёте в приложении криптовалюту, то и пока оно открыто, не чаще раза в час. Один запрос возвращает цены всех монет сразу, поэтому не раскрывает, какие именно у вас есть и сколько.</li>
     </ul>
     <p>Эти запросы не содержат ничего из ваших счетов и операций. Как и при любом запросе в интернете, эти организации видят IP-адрес вашего устройства и обрабатывают его по своим правилам.</p>
-    <p>В Kapitál нет рекламы, аналитики, отчётов о сбоях и отслеживания, а также сторонних SDK, которые собирают данные.</p>
+    <p>В Kapitál нет рекламы, аналитики, автоматических отчётов о сбоях и отслеживания, а также сторонних SDK, которые собирают данные.</p>
 
     <h3>Резервные копии и файлы, которыми вы делитесь</h3>
-    <p>Когда вы экспортируете резервную копию, Kapitál создаёт файл со всеми вашими данными и открывает меню «Поделиться»; куда его сохранить, решаете вы. Файл резервной копии не зашифрован, поэтому храните его в надёжном месте. Восстановление из резервной копии заменяет данные в приложении.</p>
-    <p>Если вы включите автокопию, вы выбираете папку во встроенном выборе папок Android, и Kapitál получает доступ только к ней. Раз в день при открытии приложения и после каждого импорта он сохраняет туда файл резервной копии и оставляет последние семь. Эти копии тоже не зашифрованы. Они остаются в папке, пока вы их не удалите, в том числе после удаления Kapitál. Если папка синхронизируется с облачным сервисом, к копиям применяется политика конфиденциальности этого сервиса.</p>
+    <p>Когда вы экспортируете резервную копию, Kapitál создаёт файл со всеми вашими данными и открывает меню «Поделиться»; куда его сохранить, решаете вы. Восстановление из резервной копии заменяет данные в приложении.</p>
+    <p>Если вы включите автокопию, вы выбираете папку во встроенном выборе папок Android, и Kapitál получает доступ только к ней. Раз в день при открытии приложения и после каждого импорта он сохраняет туда файл резервной копии и оставляет последние семь. Они остаются в папке, пока вы их не удалите, в том числе после удаления Kapitál. Если папка синхронизируется с облачным сервисом, к копиям применяется политика конфиденциальности этого сервиса.</p>
+    <p>Резервные копии шифруются, только если вы задали пароль для копий. Тогда каждый файл резервной копии и каждая автокопия шифруются по AES-256-GCM ключом, полученным из вашего пароля (PBKDF2, 600 000 итераций). Сам пароль не хранится; полученный ключ хранится в защищённом хранилище ключей телефона, чтобы шифровать и автокопии. Без пароля зашифрованную копию не откроет никто, в том числе разработчик. Без пароля файлы резервных копий не зашифрованы, поэтому храните их в надёжном месте.</p>
+
+    <h3>Напоминания и виджет на главном экране</h3>
+    <p>Напоминания о платежах, лимитах и выписках рассчитываются и планируются на вашем телефоне и показываются как обычные уведомления Android; никакой сервис уведомлений или сервер в этом не участвует. Их можно выключить в приложении или в настройках Android.</p>
+    <p>Если вы добавите виджет Kapitál на главный экран, он показывает ваш капитал, сколько осталось в пределах лимитов, и ближайший регулярный платёж. Чтобы рисовать его, когда приложение закрыто, Kapitál хранит краткую сводку этих цифр в защищённом хранилище телефона. Их видит любой, кто видит ваш главный экран, поэтому, пока включена блокировка приложения, виджет не показывает сумм.</p>
+
+    <h3>Сообщение о проблеме</h3>
+    <p>Kapitál хранит на телефоне короткую техническую заметку о последней ошибке: текст ошибки, место в коде приложения, где она произошла, а для выписки, которую не удалось прочитать, — причину и тип файла (например, .pdf). В ней никогда нет сумм, названий счетов или содержимого файлов. Когда вы нажимаете «Сообщить о проблеме», Kapitál открывает ваше почтовое приложение с черновиком письма разработчику: ваше описание, версии приложения и Android, модель телефона, язык приложения и эта заметка. Ничего не отправляется, пока вы сами не отправите письмо. Если отправите, разработчик получит его вместе с вашим адресом и использует только для ответа и исправления проблемы.</p>
 
     <h3>Блокировка приложения</h3>
     <p>Если включить блокировку, телефон проверяет ваш отпечаток пальца или лицо через собственное системное окно. Kapitál никогда не получает доступа к вашим биометрическим данным.</p>
 
     <h3>Удаление данных</h3>
-    <p>Операции и счета можно удалить в приложении в любой момент. Если удалить Kapitál или очистить его данные в настройках Android, всё, что он хранил, будет удалено. У разработчика нет копии ваших данных, поэтому с нашей стороны удалять нечего.</p>
+    <p>Операции, счета и цели можно удалить в приложении в любой момент. Если удалить Kapitál или очистить его данные в настройках Android, всё, что он хранил на телефоне, будет удалено. У разработчика нет копии ваших данных, поэтому с нашей стороны удалять нечего.</p>
 
     <h3>Дети</h3>
     <p>Kapitál предназначен для взрослых и не ориентирован на детей.</p>
