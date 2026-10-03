@@ -101,6 +101,7 @@
     <a href="#de" hreflang="de">Deutsch</a>
     <a href="#fr" hreflang="fr">Français</a>
     <a href="#it" hreflang="it">Italiano</a>
+    <a href="#pl" hreflang="pl">Polski</a>
     <a href="#cs" hreflang="cs">Čeština</a>
     <a href="#da" hreflang="da">Dansk</a>
     <a href="#nb" hreflang="nb">Norsk</a>
@@ -303,6 +304,55 @@
 
     <h3>Contatti</h3>
     <p>Domande sulla privacy: <a href="mailto:ganjubasic314@gmail.com">ganjubasic314@gmail.com</a></p>
+  </section>
+
+  <section id="pl" lang="pl">
+    <h2>Polityka prywatności</h2>
+    <p class="date">Obowiązuje od 3 października 2026</p>
+    <p class="lead">Kapitál to aplikacja do finansów osobistych na Androida, która pokazuje twój majątek i wydatki. Ta polityka wyjaśnia, co dzieje się z twoimi danymi. W skrócie: wszystko zostaje w twoim telefonie. Twórca nie zbiera, nie otrzymuje, nie przechowuje, nie udostępnia ani nie sprzedaje żadnych twoich danych.</p>
+
+    <h3>Dane, które dodajesz do aplikacji</h3>
+    <p>To ty decydujesz, co trafia do Kapitál: wyciągi z banków, od brokerów i z giełd kryptowalut, które zdecydujesz się zaimportować (pliki CSV, Excel, PDF lub ZIP), oraz konta, salda, transakcje, pozycje, kategorie, cele, notatki i ustawienia, które tworzysz lub zmieniasz. Wyciągi są odczytywane w telefonie; same pliki nie są nigdzie wysyłane.</p>
+
+    <h3>Gdzie są przechowywane</h3>
+    <p>Wszystko jest przechowywane wyłącznie w twoim telefonie, w bazie danych szyfrowanej SQLCipher (AES-256). Klucz szyfrowania jest w bezpiecznym magazynie kluczy telefonu. Kapitál nie ma kont użytkowników ani serwerów i nie korzysta z automatycznej kopii zapasowej Androida w chmurze, więc twoje dane nie są też kopiowane na Dysk Google.</p>
+
+    <h3>Co przechodzi przez internet</h3>
+    <p>Kapitál pobiera tylko dane publiczne:</p>
+    <ul>
+      <li>kursy walut Czeskiego Banku Narodowego, Narodowego Banku Ukrainy i Europejskiego Banku Centralnego;</li>
+      <li>inflację i stopy banków centralnych z Banku Rozrachunków Międzynarodowych i Narodowego Banku Ukrainy;</li>
+      <li>bieżące ceny kryptowalut z publicznych danych rynkowych Binance: gdy importujesz wyciąg z Binance oraz, jeśli trzymasz w aplikacji kryptowaluty, gdy aplikacja jest otwarta, nie częściej niż raz na godzinę. Jedno zapytanie zwraca ceny wszystkich monet naraz, więc nie zdradza, które masz ani ile.</li>
+    </ul>
+    <p>Te zapytania nie zawierają niczego z twoich kont ani transakcji. Jak przy każdym zapytaniu w internecie, te instytucje widzą adres IP twojego urządzenia i przetwarzają go według własnych zasad prywatności.</p>
+    <p>Kapitál nie zawiera reklam, analityki, automatycznych raportów o awariach ani śledzenia, ani zewnętrznych SDK zbierających dane.</p>
+
+    <h3>Kopie zapasowe i pliki, które udostępniasz</h3>
+    <p>Gdy eksportujesz kopię zapasową, Kapitál tworzy plik ze wszystkimi twoimi danymi i otwiera menu udostępniania telefonu; to ty wybierasz, dokąd trafi. Przywrócenie kopii zastępuje dane w aplikacji.</p>
+    <p>Jeśli włączysz automatyczne kopie, wybierasz folder we wbudowanym wyborze folderów Androida, a Kapitál dostaje dostęp tylko do niego. Raz dziennie przy otwarciu aplikacji i po każdym imporcie zapisuje tam plik kopii i zachowuje siedem ostatnich. Zostają w folderze, dopóki ich nie usuniesz, także po odinstalowaniu Kapitál. Jeśli folder synchronizuje się z usługą w chmurze, do kopii stosuje się polityka prywatności tej usługi.</p>
+    <p>Kopie są szyfrowane tylko wtedy, gdy ustawisz hasło kopii zapasowych. Wtedy każdy plik kopii i każda automatyczna kopia są szyfrowane AES-256-GCM kluczem wyprowadzonym z twojego hasła (PBKDF2, 600 000 iteracji). Samo hasło nie jest zapisywane; wyprowadzony klucz jest w bezpiecznym magazynie kluczy telefonu, aby szyfrować także automatyczne kopie. Bez hasła nikt nie otworzy zaszyfrowanej kopii, również twórca. Bez hasła pliki kopii nie są szyfrowane, więc przechowuj je w bezpiecznym miejscu.</p>
+
+    <h3>Przypomnienia i widżet na ekranie głównym</h3>
+    <p>Przypomnienia o płatnościach, limitach i wyciągach są obliczane i planowane w twoim telefonie i wyświetlane jako zwykłe powiadomienia Androida; nie uczestniczy w tym żadna usługa powiadomień ani serwer. Możesz je wyłączyć w aplikacji lub w ustawieniach Androida.</p>
+    <p>Jeśli dodasz widżet Kapitál do ekranu głównego, pokazuje on twój majątek, ile zostało w limitach i najbliższą płatność cykliczną. Aby rysować go przy zamkniętej aplikacji, Kapitál trzyma krótkie podsumowanie tych liczb w bezpiecznym magazynie telefonu. Widzi je każdy, kto widzi twój ekran główny, dlatego gdy blokada aplikacji jest włączona, widżet nie pokazuje kwot.</p>
+
+    <h3>Zgłaszanie problemu</h3>
+    <p>Kapitál przechowuje w telefonie krótką notatkę techniczną o ostatnim błędzie: treść błędu, miejsce w kodzie aplikacji, w którym wystąpił, a dla wyciągu, którego nie udało się odczytać, przyczynę i typ pliku (np. .pdf). Nigdy nie zawiera kwot, nazw kont ani zawartości plików. Gdy dotkniesz „Zgłoś problem”, Kapitál otworzy twoją aplikację pocztową z wersją roboczą wiadomości do twórcy: twój opis, wersje aplikacji i Androida, model telefonu, język aplikacji i tę notatkę. Nic nie zostanie wysłane, dopóki sam nie wyślesz e-maila. Jeśli to zrobisz, twórca otrzyma go wraz z twoim adresem e-mail i użyje go tylko, aby odpowiedzieć i naprawić problem.</p>
+
+    <h3>Blokada aplikacji</h3>
+    <p>Jeśli włączysz blokadę aplikacji, telefon sprawdza twój odcisk palca lub twarz własnym oknem systemowym. Kapitál nigdy nie ma dostępu do twoich danych biometrycznych.</p>
+
+    <h3>Usuwanie danych</h3>
+    <p>Transakcje, konta i cele możesz w każdej chwili usunąć w aplikacji. Odinstalowanie Kapitál lub wyczyszczenie jego danych w ustawieniach Androida usuwa wszystko, co zapisał w telefonie. Twórca nie ma kopii twoich danych, więc po naszej stronie nie ma czego usuwać.</p>
+
+    <h3>Dzieci</h3>
+    <p>Kapitál jest przeznaczony dla dorosłych i nie jest skierowany do dzieci.</p>
+
+    <h3>Zmiany</h3>
+    <p>Jeśli ta polityka się zmieni, nowa wersja zostanie opublikowana na tej stronie z nową datą obowiązywania.</p>
+
+    <h3>Kontakt</h3>
+    <p>Pytania o prywatność: <a href="mailto:ganjubasic314@gmail.com">ganjubasic314@gmail.com</a></p>
   </section>
 
   <section id="cs" lang="cs">
